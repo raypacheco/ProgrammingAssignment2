@@ -47,6 +47,7 @@ cacheSolve <- function(x, ...) {
     return(i)
   }
   ## if the inverse is not cached then it computes the inverse
+  ## and caches the inverse to the setinv function.
   data <- x$get()
   i <- solve(data, ...)
   x$setinv(i)
